@@ -1,6 +1,10 @@
 import streamlit as st
 import requests
-st.markdown(' Website Watching from above ')
+import numpy as np
+
+st.title(' Website Watching from above ')
+
+st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 
 '''
 1. Variables asked:
@@ -15,27 +19,53 @@ st.markdown(' Website Watching from above ')
 6. Display the prediction to the user
 '''
 
-
 with st.form(key='params_for_api'):
 
-    adress = st.text_input('adress','160 Av. des Martyrs, 38000 Grenoble')
-    # longitude = st.number_input('longitude', value=40.7614327)
-    # latitude = st.number_input('latitude', value=-73.9798156)
-    historical_year = st.number_input('historical year',min_value=2017, max_value=2020, step=1)
-    comparison_year = st.number_input('comparison year',min_value=2018, max_value=2020, step=1)
+    adress = st.text_input('Adress or GPS coordinates','160 Av. des Martyrs, 38000 Grenoble')
+    year_1 = st.selectbox('Year 1', ('2017', '2018', '2019', '2020', 'Google'))
+    year_2 = st.selectbox('Year 2', ('2017', '2018', '2019', '2020', 'Google'))
 
-    st.form_submit_button('Landscape evolution calculation')
+    st.form_submit_button('Landscape evolution')
 
 params = dict(
-    #longitude=longitude,
-    #latitude=latitude,
     adress = adress,
-    historical_year=historical_year,
-    comparison_year=comparison_year)
+    year_1 = year_1,
+    year_2 = year_2)
 
 wfa_api_url = '' # url link to be provided
 response = requests.get(wfa_api_url, params=params)
 
-prediction = response.json()
+results = response.json()
+#get.image
+#get.image
+classification_summary = results['summary'] # summary to be confirmed
+classification_1 = np.array(results['year_1']) # year_1 to be confirmed
+classification_2 = np.array(results['year_2']) # year_2 to be confirmed
+classification_delta = classification_1 - classification_2
 
-st.header(f'evolution landscape percentage: {(prediction)}')
+col1, col2, col3 = st.columns(3)
+
+st.header(f'Landscape evolution: {year_1} vs. {year_2}')
+
+with col1:
+   st.header("Year 1")
+   st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+   st.header("Year 2")
+   st.image("https://static.streamlit.io/examples/dog.jpg")
+
+with col3:
+   st.header("Landscape evolution")
+   st.image("https://static.streamlit.io/examples/owl.jpg")
+
+col4, col5, col6 = st.columns(3)
+
+with col4:
+   st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col5:
+   st.image("https://static.streamlit.io/examples/dog.jpg")
+
+with col6:
+   st.image("https://static.streamlit.io/examples/owl.jpg")
