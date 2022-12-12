@@ -1,6 +1,12 @@
 import streamlit as st
 import requests
-st.markdown(' Website Watching from above ')
+import numpy as np
+from wfa.utils.image_viz import summary
+from wfa.utils.get_new_images import get_new_image
+
+st.title(' Website Watching from above ')
+
+st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 
 '''
 1. Variables asked:
@@ -15,27 +21,52 @@ st.markdown(' Website Watching from above ')
 6. Display the prediction to the user
 '''
 
-
 with st.form(key='params_for_api'):
 
-    adress = st.text_input('adress','160 Av. des Martyrs, 38000 Grenoble')
-    # longitude = st.number_input('longitude', value=40.7614327)
-    # latitude = st.number_input('latitude', value=-73.9798156)
-    historical_year = st.number_input('historical year',min_value=2017, max_value=2020, step=1)
-    comparison_year = st.number_input('comparison year',min_value=2018, max_value=2020, step=1)
+    adress = st.text_input('Adress or GPS coordinates','160 Av. des Martyrs, 38000 Grenoble')
+    year_1 = st.selectbox('Year 1', ('2017', '2018', '2019', '2020', 'Google'))
+    year_2 = st.selectbox('Year 2', ('2017', '2018', '2019', '2020', 'Google'))
 
-    st.form_submit_button('Landscape evolution calculation')
+    st.form_submit_button('Landscape evolution')
 
 params = dict(
-    #longitude=longitude,
-    #latitude=latitude,
     adress = adress,
-    historical_year=historical_year,
-    comparison_year=comparison_year)
+    year_1 = year_1,
+    year_2 = year_2)
 
-wfa_api_url = '' # url link to be provided
+wfa_api_url = 'https://wfa01-tqv5zy4gla-ew.a.run.app/' # url link to be confirmed
 response = requests.get(wfa_api_url, params=params)
+results = response.json()
+class_1 = np.array(results['year_1']) # year_1 to be confirmed
+class_2 = np.array(results['year_2']) # year_2 to be confirmed
 
-prediction = response.json()
+image_1 = get_new_image(adress, year_1)
+image_2 = get_new_image(adress, year_2)
+changes, summary = summary(class_1, class_2)
 
-st.header(f'evolution landscape percentage: {(prediction)}')
+col1, col2, col3 = st.columns(3)
+
+st.header(f'Landscape evolution: {year_1} vs. {year_2}')
+
+with col1:
+   st.header("Year 1")
+   st.image(image_1)
+
+with col2:
+   st.header("Year 2")
+   st.image(image_2)
+
+with col3:
+   st.header("Landscape evolution")
+   st.dataframe(summary)
+
+col4, col5, col6 = st.columns(3)
+
+with col4:
+   st.image(class_1) #np.array: assign RGB code to each class
+
+with col5:
+   st.image(class_2) #np.array: assign RGB code to each class
+
+with col6:
+   st.dataframe(changes)
