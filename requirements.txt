@@ -1,1 +1,1 @@
-wfa @ git+https://github.com/pabloknecht/watching-from-above.git
+wfa @ git+https://github.com/pabloknecht/watching-from-above.git --install-option="--no-deps"
