@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import numpy as np
 from get_new_images import get_new_image
-from image_viz import summary, landscape_changes, image_colormap_changes
+from image_viz import summary, landscape_changes, image_colormap_changes, image_colormap
 
 
 st.title(' Website Watching from above ')
@@ -91,8 +91,21 @@ if submitted:
     ##################################################
     #          THIRD TABLE - Plot comparision        #
     ##################################################
+    col31, col32, col33 = st.columns(3)
 
+    with col31:
+        st.header("Year 1")
+        img_colormap_1 = image_colormap(cat_year_1_np)
+        st.image(img_colormap_1)
 
+    with col32:
+        st.header("Year 2")
+        img_colormap_2 = image_colormap(cat_year_2_np)
+        st.image(img_colormap_2)
+
+    with col33:
+        st.header("Labels")
+        st.image('LABEL_ONLY.png')
 
 
     ##################################################
