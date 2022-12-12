@@ -51,7 +51,7 @@ if submitted:
     image_year_2 = get_new_image(adress, year_2)
 
     # using summary function to compare results
-    changes, summary = summary(cat_year_1_np, cat_year_2_np)
+    changes, sry = summary(cat_year_1_np, cat_year_2_np)
 
     # A table
     col1, col2, col3 = st.columns(3)
