@@ -69,7 +69,7 @@ if submitted:
         st.image(img_changes_2)
 
     # Anotehr table
-    col21, col22 = st.columns(3)
+    col21, col22 = st.columns(2)
 
     with col21:
         st.image(cat_year_1_np) #np.array: assign RGB code to each class
