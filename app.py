@@ -5,22 +5,9 @@ from get_new_images import get_new_image
 from image_viz import summary, landscape_changes, image_colormap
 
 
-st.title(' Website Watching from above ')
+st.title('Watching from above ')
 
 st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
-
-# '''
-# 1. Variables asked:
-# - adress
-# - year_1
-# - year_2
-
-# 2. Define the url API
-# 3. Build a dictionary containing the parameters for our API...
-# 4. Call our API using the `requests` package...
-# 5. Retrieve the prediction from the **JSON** returned by the API...
-# 6. Display the prediction to the user
-# '''
 
 with st.form(key='params_for_api'):
 
@@ -92,7 +79,7 @@ if submitted:
     ##################################################
     #          SECOND TABLE - Plot comparision       #
     ##################################################
-    col21, col22 = st.columns(2)
+    col21, col22, col23 = st.columns([2, 2, 1])
 
     with col21:
         st.header(f"{year_1}")
@@ -103,6 +90,9 @@ if submitted:
         st.header(f"{year_2}")
         img_changes_2 = landscape_changes(image_year_2, changes)
         st.image(img_changes_2)
+
+    with col23:
+        pass
 
 
     ##################################################
