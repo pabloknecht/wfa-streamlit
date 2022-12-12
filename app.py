@@ -42,43 +42,42 @@ if submitted:
     results = response.json()
     st.write(results)
 
-    class_1 = np.array(results['current_year']) # year_1 to be confirmed
-    class_2 = np.array(results['historical_year']) # year_2 to be confirmed
+    # Extract predictions for each image
+    cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
+    cat_year_2_np = np.array(results['historical_year']) # year_2 to be confirmed
 
+    # Get the correspondent images
+    image_year_1 = get_new_image(adress, year_1)
+    image_year_2 = get_new_image(adress, year_2)
 
+    # using summary function to compare results
+    changes, summary = summary(cat_year_1_np, cat_year_2_np)
 
+    # A table
+    col1, col2, col3 = st.columns(3)
 
+    st.header(f'Landscape evolution: {year_1} vs. {year_2}')
 
+    with col1:
+        st.header("Year 1")
+        st.image(image_year_1)
 
+    with col2:
+        st.header("Year 2")
+        st.image(image_year_2)
 
+    with col3:
+        st.header("Landscape evolution")
+        st.dataframe(summary)
 
-# image_1 = get_new_image(adress, year_1)
-# image_2 = get_new_image(adress, year_2)
-# changes, summary = summary(class_1, class_2)
+    # Anotehr table
+    col4, col5, col6 = st.columns(3)
 
-# col1, col2, col3 = st.columns(3)
+    with col4:
+        st.image(cat_year_1_np) #np.array: assign RGB code to each class
 
-# st.header(f'Landscape evolution: {year_1} vs. {year_2}')
+    with col5:
+        st.image(cat_year_2_np) #np.array: assign RGB code to each class
 
-# with col1:
-#    st.header("Year 1")
-#    st.image(image_1)
-
-# with col2:
-#    st.header("Year 2")
-#    st.image(image_2)
-
-# with col3:
-#    st.header("Landscape evolution")
-#    st.dataframe(summary)
-
-# col4, col5, col6 = st.columns(3)
-
-# with col4:
-#    st.image(class_1) #np.array: assign RGB code to each class
-
-# with col5:
-#    st.image(class_2) #np.array: assign RGB code to each class
-
-# with col6:
-#    st.dataframe(changes)
+    with col6:
+        st.dataframe(changes)
