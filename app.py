@@ -71,9 +71,9 @@ if submitted:
 
 
     ##################################################
-    #          THIRD TABLE - Plot comparision        #
+    #                  TABLE Colormap                #
     ##################################################
-    col31, col32 = st.columns(2)
+    col31, col32, col33 = st.columns([2, 2, 1])
 
     with col31:
         st.header(f"{year_1}")
@@ -85,6 +85,9 @@ if submitted:
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
 
+    with col33:
+        st.header("Labels")
+        st.image('LABEL_ONLY.png')
 
     ##################################################
     #          SECOND TABLE - Plot comparision       #
@@ -103,16 +106,9 @@ if submitted:
 
 
     ##################################################
-    #          FORTH TABLE - Plot comparision        #
+    #          Table                                 #
     ##################################################
-    col41, col42 = st.columns(2)
-
-    with col41:
-        st.header("Landscape evolution")
-        st.dataframe(sry)
-
-    with col42:
-        st.header("Labels")
-        st.image('LABEL_ONLY.png')
+    st.header("Landscape evolution")
+    st.dataframe(sry)
 
     st.balloons()
