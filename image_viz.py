@@ -129,17 +129,19 @@ def image_colormap_changes(changes):
     '''
     This function receives an np.array with the changes and return a black & white image with the changes in each quadrand
     '''
-    white_box = np.full((64,64,3), 255, dtype='uint8')
-    white_box = Image.fromarray(white_box)
+    color1 = np.array([255, 192, 0])
+    color1_box = np.full((64,64,3), color1)
+    color1_box = Image.fromarray(color1_box)
 
-    black_box = np.full((64,64,3), 0, dtype='uint8')
-    black_box = Image.fromarray(black_box)
+    color2 = np.array([0, 255, 0])
+    color2_box = np.full((64,64,3), color2)
+    color2_box = Image.fromarray(color2_box)
 
     size = changes.shape[0]
     imgs = {}
     for y in range(size):
         for x in range(size):
-            imgs[f"{x}_{y}"] = white_box if changes[y,x] == 0 else black_box
+            imgs[f"{x}_{y}"] = color1_box if changes[y,x] == 0 else color2_box
 
     img = stitch_tiles(imgs, 0, 0, size, 64)
     return img

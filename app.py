@@ -91,7 +91,7 @@ if submitted:
     ##################################################
     #          THIRD TABLE - Plot comparision        #
     ##################################################
-    col31, col32, col33 = st.columns(3)
+    col31, col32 = st.columns(2)
 
     with col31:
         st.header("Year 1")
@@ -102,10 +102,6 @@ if submitted:
         st.header("Year 2")
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
-
-    with col33:
-        st.header("Labels")
-        st.image('LABEL_ONLY.png')
 
 
     ##################################################
@@ -118,5 +114,5 @@ if submitted:
         st.dataframe(sry)
 
     with col42:
-        BW_img = image_colormap_changes(changes)
-        st.image(BW_img)
+        st.header("Labels")
+        st.image('LABEL_ONLY.png')
