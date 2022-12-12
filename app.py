@@ -38,8 +38,8 @@ params = dict(
 wfa_api_url = 'https://wfa01-tqv5zy4gla-ew.a.run.app/' # url link to be confirmed
 response = requests.get(wfa_api_url, params=params)
 results = response.json()
-class_1 = np.array(results['year_1']) # year_1 to be confirmed
-class_2 = np.array(results['year_2']) # year_2 to be confirmed
+class_1 = np.array(results['current_year']) # year_1 to be confirmed
+class_2 = np.array(results['historical_year']) # year_2 to be confirmed
 
 image_1 = get_new_image(adress, year_1)
 image_2 = get_new_image(adress, year_2)
