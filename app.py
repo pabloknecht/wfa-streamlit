@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import numpy as np
 from get_new_images import get_new_image
-from image_viz import summary, landscape_changes, image_colormap_changes, image_colormap
+from image_viz import summary, landscape_changes, image_colormap
 
 
 st.title(' Website Watching from above ')
