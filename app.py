@@ -38,8 +38,6 @@ params = dict(
 wfa_api_url = 'https://wfa01-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
 
 if submitted:
-    st.balloons()
-
     response = requests.get(wfa_api_url, params=params)
     results = response.json()
     # st.write(results)
@@ -116,3 +114,5 @@ if submitted:
     with col42:
         st.header("Labels")
         st.image('LABEL_ONLY.png')
+
+    st.balloons()
