@@ -42,13 +42,15 @@ if submitted:
     results = response.json()
     st.write(results)
 
+    class_1 = np.array(results['current_year']) # year_1 to be confirmed
+    class_2 = np.array(results['historical_year']) # year_2 to be confirmed
 
 
 
 
 
-# class_1 = np.array(results['current_year']) # year_1 to be confirmed
-# class_2 = np.array(results['historical_year']) # year_2 to be confirmed
+
+
 
 # image_1 = get_new_image(adress, year_1)
 # image_2 = get_new_image(adress, year_2)
