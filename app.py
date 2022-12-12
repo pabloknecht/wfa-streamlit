@@ -9,18 +9,18 @@ st.title(' Website Watching from above ')
 
 st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 
-'''
-1. Variables asked:
-- adress
-- year_1
-- year_2
+# '''
+# 1. Variables asked:
+# - adress
+# - year_1
+# - year_2
 
-2. Define the url API
-3. Build a dictionary containing the parameters for our API...
-4. Call our API using the `requests` package...
-5. Retrieve the prediction from the **JSON** returned by the API...
-6. Display the prediction to the user
-'''
+# 2. Define the url API
+# 3. Build a dictionary containing the parameters for our API...
+# 4. Call our API using the `requests` package...
+# 5. Retrieve the prediction from the **JSON** returned by the API...
+# 6. Display the prediction to the user
+# '''
 
 with st.form(key='params_for_api'):
 
