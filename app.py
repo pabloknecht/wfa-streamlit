@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
 import numpy as np
-from wfa.utils.image_viz import summary
-from wfa.utils.get_new_images import get_new_image
+from get_new_images import get_new_image
+from image_viz import summary
+
 
 st.title(' Website Watching from above ')
 
