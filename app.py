@@ -40,7 +40,7 @@ wfa_api_url = 'https://wfa01-tqv5zy4gla-ew.a.run.app/watchingfromabove/predictio
 if submitted:
     response = requests.get(wfa_api_url, params=params)
     results = response.json()
-    st.write(results)
+    # st.write(results)
 
     # Extract predictions for each image
     cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
@@ -68,7 +68,7 @@ if submitted:
 
     with col3:
         st.header("Landscape evolution")
-        st.dataframe(summary)
+        st.dataframe(sry)
 
     # Anotehr table
     col4, col5, col6 = st.columns(3)
