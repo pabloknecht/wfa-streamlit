@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import numpy as np
 from get_new_images import get_new_image
-from image_viz import summary
+from image_viz import summary, landscape_changes
 
 
 st.title(' Website Watching from above ')
@@ -54,29 +54,28 @@ if submitted:
     changes, sry = summary(cat_year_1_np, cat_year_2_np)
 
     # A table
-    col1, col2 = st.columns(2)
+    col11, col12 = st.columns(2)
 
     st.header(f'Landscape evolution: {year_1} vs. {year_2}')
 
-    with col1:
+    with col11:
         st.header("Year 1")
-        st.image(image_year_1)
+        img_changes_1 = landscape_changes(image_year_1, changes)
+        st.image(img_changes_1)
 
-    with col2:
+    with col12:
         st.header("Year 2")
-        st.image(image_year_2)
+        img_changes_2 = landscape_changes(image_year_2, changes)
+        st.image(img_changes_2)
 
     # Anotehr table
-    col4, col5, col6 = st.columns(3)
+    col21, col22 = st.columns(3)
 
-    with col4:
+    with col21:
         st.image(cat_year_1_np) #np.array: assign RGB code to each class
 
-    with col5:
+    with col22:
         st.image(cat_year_2_np) #np.array: assign RGB code to each class
-
-    with col6:
-        st.dataframe(changes)
 
 
     st.header("Landscape evolution")
