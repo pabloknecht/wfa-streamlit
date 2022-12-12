@@ -54,7 +54,7 @@ if submitted:
     changes, sry = summary(cat_year_1_np, cat_year_2_np)
 
     # A table
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     st.header(f'Landscape evolution: {year_1} vs. {year_2}')
 
@@ -65,10 +65,6 @@ if submitted:
     with col2:
         st.header("Year 2")
         st.image(image_year_2)
-
-    with col3:
-        st.header("Landscape evolution")
-        st.dataframe(sry)
 
     # Anotehr table
     col4, col5, col6 = st.columns(3)
@@ -81,3 +77,7 @@ if submitted:
 
     with col6:
         st.dataframe(changes)
+
+
+    st.header("Landscape evolution")
+    st.dataframe(sry)
