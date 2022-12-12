@@ -98,7 +98,10 @@ if submitted:
     ##################################################
     #          Table                                 #
     ##################################################
-    st.header("Landscape evolution")
-    st.dataframe(sry)
+    col41, col42, col43 = st.columns([1, 3, 1])
+
+    with col42:
+        st.header("Landscape evolution")
+        st.dataframe(sry)
 
     st.balloons()
