@@ -1,17 +1,56 @@
 import streamlit as st
 import requests
 import numpy as np
+from PIL import Image
 from get_new_images import get_new_image
 from image_viz import summary, landscape_changes, image_colormap
 
-#have full-page configuration in streamlit
-st.set_page_config(layout="wide")
+#set images
+logo = Image.open('wfa_logo.png')
+icon = Image.open('wfa_icon.png')
 
-#set path
-img_path='wfa_logo.png'
+#set streamlit page config
+st.set_page_config(layout="wide", page_title="Watching From Above", page_icon=icon)
 
-#set image
-#logo = Im
+#Remove Menu Button and Streamlit Icon
+hide_default_format = """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_default_format, unsafe_allow_html=True)
+
+# hide fullsize button
+hide_img_fs = '''
+    <style>
+        button[title="View fullscreen"] {
+            visibility: hidden;
+        }
+        .css-1j77i4l {
+            display: flex;
+            justify-content: center;
+        }
+        .css-keje6w {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    '''
+st.markdown(hide_img_fs, unsafe_allow_html=True)
+
+# Remove whitespace from the top of the page
+remove_w_s = '''
+        <style>
+                div.block-container {
+                    padding-top:1rem;
+                    padding-bottom:0rem;
+                }
+        </style>
+        '''
+st.markdown(remove_w_s, unsafe_allow_html=True)
+
+st.image(logo, width= 200)
 
 st.title('Watching from above ')
 
@@ -33,7 +72,6 @@ params = dict(
 wfa_api_url = 'https://wfa02-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
 
 if submitted:
-
     ##################################################
     #          API Call                              #
     ##################################################
