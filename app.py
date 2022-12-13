@@ -11,14 +11,14 @@ st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 
 with st.form(key='params_for_api'):
 
-    adress = st.text_input('Adress or GPS coordinates','160 Av. des Martyrs, 38000 Grenoble')
+    address = st.text_input('Adress or GPS coordinates','160 Av. des Martyrs, 38000 Grenoble')
     year_1 = st.selectbox('Year 1', ('2017', '2018', '2019', '2020', 'Google'))
     year_2 = st.selectbox('Year 2', ('2017', '2018', '2019', '2020', 'Google'))
 
     submitted = st.form_submit_button('Landscape evolution')
 
 params = dict(
-    adress = adress,
+    address = address,
     year_1 = year_1,
     year_2 = year_2)
 
@@ -29,12 +29,8 @@ if submitted:
     ##################################################
     #          API Call                              #
     ##################################################
-    st.write(params)
-    st.write(wfa_api_url)
     response = requests.get(wfa_api_url, params=params)
     results = response.json()
-
-    st.write(results)
 
     # Extract predictions for each image
     cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
@@ -42,18 +38,14 @@ if submitted:
 
     # using summary function to compare results
     changes, sry = summary(cat_year_1_np, cat_year_2_np)
-    st.write(cat_year_1_np)
-    st.write(cat_year_2_np)
-    st.write(changes)
-
 
 
     ##################################################
     #          Getting images for display            #
     ##################################################
     # Get the correspondent images
-    image_year_1 = get_new_image(adress, year_1)
-    image_year_2 = get_new_image(adress, year_2)
+    image_year_1 = get_new_image(address, year_1)
+    image_year_2 = get_new_image(address, year_2)
 
 
     ##################################################
