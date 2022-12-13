@@ -29,8 +29,12 @@ if submitted:
     ##################################################
     #          API Call                              #
     ##################################################
+    st.write(params)
+    st.write(wfa_api_url)
     response = requests.get(wfa_api_url, params=params)
     results = response.json()
+
+    st.write(results)
 
     # Extract predictions for each image
     cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
@@ -41,7 +45,7 @@ if submitted:
     st.write(cat_year_1_np)
     st.write(cat_year_2_np)
     st.write(changes)
-    st.write(params)
+
 
 
     ##################################################
