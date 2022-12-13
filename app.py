@@ -69,7 +69,7 @@ params = dict(
     year_1 = year_1,
     year_2 = year_2)
 
-wfa_api_url = 'https://wfa02-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
+wfa_api_url = 'https://wfa03-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
 
 if submitted:
     ##################################################
