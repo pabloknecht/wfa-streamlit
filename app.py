@@ -50,7 +50,7 @@ remove_w_s = '''
         '''
 st.markdown(remove_w_s, unsafe_allow_html=True)
 
-st.image(logo, width=1000)
+st.image(logo, width=500)
 
 st.title('Watching from above ')
 
