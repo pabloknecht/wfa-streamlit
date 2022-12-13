@@ -38,7 +38,8 @@ if submitted:
 
     # using summary function to compare results
     changes, sry = summary(cat_year_1_np, cat_year_2_np)
-    st.write(changes)
+    st.write(cat_year_1_np)
+    st.write(cat_year_2_np)
     st.write(params)
 
 
