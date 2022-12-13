@@ -35,6 +35,9 @@ if submitted:
     # Extract predictions for each image
     cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
     cat_year_2_np = np.array(results['historical_year']) # year_2 to be confirmed
+    st.write(cat_year_1_np)
+    st.write(cat_year_2_np)
+
 
     # using summary function to compare results
     changes, sry = summary(cat_year_1_np, cat_year_2_np)
