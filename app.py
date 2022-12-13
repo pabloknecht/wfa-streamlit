@@ -9,8 +9,6 @@ st.title('Watching from above ')
 
 st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 
-st.session_state.layout = 'wide'
-
 with st.form(key='params_for_api'):
 
     address = st.text_input('Adress or GPS coordinates','160 Av. des Martyrs, 38000 Grenoble')
