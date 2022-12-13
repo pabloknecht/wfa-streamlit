@@ -25,20 +25,29 @@ params = dict(
 wfa_api_url = 'https://wfa01-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
 
 if submitted:
+
+    ##################################################
+    #          API Call                              #
+    ##################################################
     response = requests.get(wfa_api_url, params=params)
     results = response.json()
-    # st.write(results)
 
     # Extract predictions for each image
     cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
     cat_year_2_np = np.array(results['historical_year']) # year_2 to be confirmed
 
+    # using summary function to compare results
+    changes, sry = summary(cat_year_1_np, cat_year_2_np)
+    st.write(changes)
+    st.write(params)
+
+
+    ##################################################
+    #          Getting images for display            #
+    ##################################################
     # Get the correspondent images
     image_year_1 = get_new_image(adress, year_1)
     image_year_2 = get_new_image(adress, year_2)
-
-    # using summary function to compare results
-    changes, sry = summary(cat_year_1_np, cat_year_2_np)
 
 
     ##################################################
