@@ -4,6 +4,14 @@ import numpy as np
 from get_new_images import get_new_image
 from image_viz import summary, landscape_changes, image_colormap
 
+#have full-page configuration in streamlit
+st.set_page_config(layout="wide")
+
+#set path
+img_path='wfa_logo.png'
+
+#set image
+#logo = Im
 
 st.title('Watching from above ')
 
