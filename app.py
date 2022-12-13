@@ -30,7 +30,7 @@ params = dict(
     year_1 = year_1,
     year_2 = year_2)
 
-wfa_api_url = 'https://wfa01-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
+wfa_api_url = 'https://wfa02-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
 
 if submitted:
 
@@ -41,8 +41,8 @@ if submitted:
     results = response.json()
 
     # Extract predictions for each image
-    cat_year_1_np = np.array(results['current_year']) # year_1 to be confirmed
-    cat_year_2_np = np.array(results['historical_year']) # year_2 to be confirmed
+    cat_year_1_np = np.array(results['year_1']) # year_1 to be confirmed
+    cat_year_2_np = np.array(results['year_2']) # year_2 to be confirmed
 
     # using summary function to compare results
     changes, sry = summary(cat_year_1_np, cat_year_2_np)
