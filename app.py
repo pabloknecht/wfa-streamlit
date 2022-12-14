@@ -55,7 +55,7 @@ st.markdown(remove_w_s, unsafe_allow_html=True)
 
 st.image(logo, width=400)
 
-st.subheader('Discover landscape evolution With Sentinel-2 satellite (EuroSAT)')
+st.subheader('Discover landscape evolution with Sentinel-2 satellite (EuroSAT)')
 
 ##################################################
 #                  test FORM                     #
@@ -161,6 +161,6 @@ if submitted:
     col41, col42, col43 = st.columns([1, 1, 1])
 
     with col42:
-        st.dataframe(data=sry, width=700, height=768)
+        st.dataframe(data=sry, width=700, height=200)
 
     st.balloons()
