@@ -3,11 +3,6 @@
   width: 100%;
 }
 
-div {
-  display: flex;
-  justify-content: center;
-}
-
 img {
   display: block;
   margin: auto;
