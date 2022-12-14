@@ -2,6 +2,13 @@
   background-color: rgba(6,5,55,255);
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
 p, span.css-10trblm.e16nr0p30 {
   color: white;
 }
