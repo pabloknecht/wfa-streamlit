@@ -59,8 +59,8 @@ st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 with st.form(key='params_for_api'):
 
     address = st.text_input('Adress or GPS coordinates','-24.319728, -50.447382')
-    year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020', 'Google'))
-    year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020', 'Google'))
+    year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'))
+    year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'))
 
     submitted = st.form_submit_button('Landscape evolution')
 
