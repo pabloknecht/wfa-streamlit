@@ -113,13 +113,13 @@ if submitted:
     ##################################################
     #          FIRST TABLE - Plot original images    #
     ##################################################
-    col11, col12, col13 = st.columns([2.5,1,2.5])
+    col11, col12 = st.columns(2)
 
     with col11:
         st.header(f"{year_1}")
         st.image(image_year_1)
 
-    with col13:
+    with col12:
         st.header(f"{year_2}")
         st.image(image_year_2)
 
@@ -127,7 +127,7 @@ if submitted:
     ##################################################
     #                  TABLE Colormap                #
     ##################################################
-    col31, col32, col33 = st.columns([2.5,1,2.5])
+    col31, col32 = st.columns(2)
 
     with col31:
         st.header(f"{year_1}")
@@ -135,29 +135,27 @@ if submitted:
         st.image(img_colormap_1)
 
     with col32:
-        st.header("Labels")
-        st.image('LABEL_ONLY.png')
-
-    with col33:
         st.header(f"{year_2}")
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
 
 
+    st.image('Labels.png')
     ##################################################
     #          SECOND TABLE - Plot comparision       #
     ##################################################
-    col21, col22, col23 = st.columns([2.5,1,2.5])
+    col21, col22 = st.columns(2)
 
     with col21:
         st.header(f"{year_1}")
         img_changes_1 = landscape_changes(image_year_1, changes)
         st.image(img_changes_1)
 
-    with col23:
+    with col22:
         st.header(f"{year_2}")
         img_changes_2 = landscape_changes(image_year_2, changes)
         st.image(img_changes_2)
+
 
     ##################################################
     #          Table                                 #
