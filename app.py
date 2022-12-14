@@ -132,13 +132,13 @@ if submitted:
         img_colormap_1 = image_colormap(cat_year_1_np)
         st.image(img_colormap_1)
 
-    with col34:
+    with col33:
         st.header(f"{year_2}")
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
 
 
-    st.image('Labels.png')
+    st.image('Labels.png', width=700)
     ##################################################
     #          SECOND TABLE - Plot comparision       #
     ##################################################
