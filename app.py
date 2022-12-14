@@ -50,7 +50,18 @@ remove_w_s = '''
         '''
 st.markdown(remove_w_s, unsafe_allow_html=True)
 
-st.image(logo, width=500)
+# Set the background image
+background = '''
+        <style>
+                p{
+                    background-image: url('wfa_logo.png');
+                }
+        </style>
+        '''
+st.markdown(background, unsafe_allow_html=True)
+
+
+#st.image(logo, width=500)
 
 st.title('Watching from above ')
 
