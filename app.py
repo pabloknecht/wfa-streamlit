@@ -114,11 +114,11 @@ if submitted:
     col11, col12, col13, col14 = st.columns([1, 1, 1, 1])
 
     with col12:
-        f"""{year_1}"""
+        st.subheader(f"{year_1}")
         st.image(image_year_1)
 
     with col13:
-        st.header(f"{year_2}")
+        st.subheader(f"{year_2}")
         st.image(image_year_2)
 
 
