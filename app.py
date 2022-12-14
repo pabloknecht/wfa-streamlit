@@ -123,6 +123,20 @@ if submitted:
 
 
     ##################################################
+    #          SECOND TABLE - Plot comparision       #
+    ##################################################
+    col21, col22, col23, col24 = st.columns([1, 1, 1, 1])
+
+    with col22:
+        img_changes_1 = landscape_changes(image_year_1, changes)
+        st.image(img_changes_1)
+
+    with col23:
+        img_changes_2 = landscape_changes(image_year_2, changes)
+        st.image(img_changes_2)
+
+
+    ##################################################
     #                  TABLE Colormap                #
     ##################################################
     col31, col32, col33, col34 = st.columns([1, 1, 1, 1])
@@ -137,18 +151,6 @@ if submitted:
 
 
     st.image('Labels.png', width=700)
-    ##################################################
-    #          SECOND TABLE - Plot comparision       #
-    ##################################################
-    col21, col22, col23, col24 = st.columns([1, 1, 1, 1])
-
-    with col22:
-        img_changes_1 = landscape_changes(image_year_1, changes)
-        st.image(img_changes_1)
-
-    with col23:
-        img_changes_2 = landscape_changes(image_year_2, changes)
-        st.image(img_changes_2)
 
 
     ##################################################
