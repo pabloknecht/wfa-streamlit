@@ -1,6 +1,6 @@
 .block-container.css-12oz5g7.egzxvld2 {
   background-color: rgba(6,5,55,255);
-  max-width: 2600px
+  max-width: 2200px
 }
 
 .appview-container.css-1wrcr25.egzxvld4 {
@@ -8,6 +8,11 @@
 }
 
 div.css-1kyxreq.etr89bj2 {
+  display: flex;
+  justify-content: center;
+}
+
+div.css-12ttj6m.epcbefy1 {
   display: flex;
   justify-content: center;
 }
