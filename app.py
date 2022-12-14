@@ -59,31 +59,14 @@ st.title('Watching from above ')
 
 st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
 
-# with st.form(key='params_for_api'):
-
-#     address = st.text_input('Adress or GPS coordinates','-24.319728, -50.447382')
-#     year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'))
-#     year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'))
-
-#     submitted = st.form_submit_button('Landscape evolution')
-
-#     if year_1 == '2017 (Europe only)':
-#         year_1 = '2017'
-
-#     if year_2 == '2017 (Europe only)':
-#         year_2 = '2017'
-
-##################################################
-#                  test FORM                     #
-##################################################
 colf1, colf2, colf3 = st.columns([1, 2, 1])
 
 with colf2:
     with st.form(key='params_for_api'):
 
         address = st.text_input('Adress or GPS coordinates','-24.319728, -50.447382')
-        year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'))
-        year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'))
+        year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1)
+        year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=-1)
 
         submitted = st.form_submit_button('Landscape evolution')
 
