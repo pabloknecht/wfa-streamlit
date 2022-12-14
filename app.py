@@ -159,13 +159,12 @@ if submitted:
         img_changes_2 = landscape_changes(image_year_2, changes)
         st.image(img_changes_2)
 
-
     ##################################################
     #          Table                                 #
     ##################################################
-    col41, col42, col43 = st.columns([1, 5, 1])
+    col41, col42, col43 = st.columns([1, 3, 1])
 
     with col42:
-        st.line_chart(data=sry,width=0, height=0, use_container_width=True)
+        st.dataframe(sry)
 
     st.balloons()
