@@ -13,7 +13,7 @@ logo = Image.open('wfa_logo.png')
 icon = Image.open('wfa_icon.png')
 
 #set streamlit page config
-st.set_page_config(layout="wide", page_title="Watching From Above", page_icon=icon)
+st.set_page_config(page_title="Watching From Above", page_icon=icon)
 
 #Remove Menu Button and Streamlit Icon
 hide_default_format = """
