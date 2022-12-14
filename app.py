@@ -54,12 +54,11 @@ st.markdown(remove_w_s, unsafe_allow_html=True)
 background = '''
         <style>
                 p{
-                    background-image: url('wfa_logo.png');
+                    background-image: logo);
                 }
         </style>
         '''
 st.markdown(background, unsafe_allow_html=True)
-
 
 #st.image(logo, width=500)
 
