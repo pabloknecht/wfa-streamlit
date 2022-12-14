@@ -8,9 +8,15 @@
   width: 100%;
 }
 
+div {
+  display: flex;
+  justify-content: center;
+}
+
 img {
   display: block;
-  width: 100%;
+  margin: auto;
+  width: 60%;
 }
 
 p, span.css-10trblm.e16nr0p30 {
