@@ -128,12 +128,10 @@ if submitted:
     col31, col32, col33, col34 = st.columns([1, 1, 1, 1])
 
     with col32:
-        st.header(f"{year_1}")
         img_colormap_1 = image_colormap(cat_year_1_np)
         st.image(img_colormap_1)
 
     with col33:
-        st.header(f"{year_2}")
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
 
@@ -145,12 +143,10 @@ if submitted:
     col21, col22, col23, col24 = st.columns([1, 1, 1, 1])
 
     with col22:
-        st.header(f"{year_1}")
         img_changes_1 = landscape_changes(image_year_1, changes)
         st.image(img_changes_1)
 
     with col23:
-        st.header(f"{year_2}")
         img_changes_2 = landscape_changes(image_year_2, changes)
         st.image(img_changes_2)
 
