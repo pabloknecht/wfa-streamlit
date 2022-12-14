@@ -57,7 +57,7 @@ st.image(logo, width=500)
 
 st.title('Watching from above')
 
-st.header('Discover landscape evolution With Sentinel-2 satellite (EuroSAT)')
+st.subheader('Discover landscape evolution With Sentinel-2 satellite (EuroSAT)')
 
 ##################################################
 #                  test FORM                     #
@@ -166,6 +166,6 @@ if submitted:
     col41, col42, col43 = st.columns([1, 5, 1])
 
     with col42:
-        st.ling_chart(data=sry,width=0, height=0, use_container_width=True)
+        st.line_chart(data=sry,width=0, height=0, use_container_width=True)
 
     st.balloons()
