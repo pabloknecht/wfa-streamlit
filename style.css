@@ -1,5 +1,9 @@
-body {
-  background-color: #002266;
+.block-container.css-12oz5g7.egzxvld2 {
+  background-color: darkblue;
+}
+
+p, span.css-10trblm.e16nr0p30 {
+  color: white;
 }
 
 .fullScreenFrame > div {
