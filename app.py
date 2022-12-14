@@ -5,6 +5,9 @@ from PIL import Image
 from get_new_images import get_new_image
 from image_viz import summary, landscape_changes, image_colormap
 
+with open("style.css") as f:
+    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+
 #set images
 logo = Image.open('wfa_logo.png')
 icon = Image.open('wfa_icon.png')
