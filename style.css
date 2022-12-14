@@ -29,3 +29,6 @@ img {
 p, span.css-10trblm.e16nr0p30 {
   color: white;
 }
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
