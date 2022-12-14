@@ -50,17 +50,7 @@ remove_w_s = '''
         '''
 st.markdown(remove_w_s, unsafe_allow_html=True)
 
-# Set the background image
-background = '''
-        <style>
-                p{
-                    background-image: logo)
-                }
-        </style>
-        '''
-st.markdown(background, unsafe_allow_html=True)
-
-#st.image(logo, width=500)
+st.image(logo, width=500)
 
 st.title('Watching from above ')
 
