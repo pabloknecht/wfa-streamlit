@@ -3,15 +3,11 @@
   width: 100%;
 }
 
-div {
-  display: flex;
-  justify-content: center;
-}
-
 img {
-  display: block;
+  display: flex;
   margin: auto;
   width: 60%;
+  justify-content: center;
 }
 
 p, span.css-10trblm.e16nr0p30 {
