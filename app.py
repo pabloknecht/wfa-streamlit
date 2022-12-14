@@ -83,7 +83,7 @@ params = dict(
     year_1 = year_1,
     year_2 = year_2)
 
-wfa_api_url = 'https://wfa03-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
+wfa_api_url = 'https://wfa04-tqv5zy4gla-ew.a.run.app/watchingfromabove/prediction'
 
 if submitted:
     ##################################################
@@ -158,9 +158,9 @@ if submitted:
     ##################################################
     #          Table                                 #
     ##################################################
-    col41, col42, col43 = st.columns([1, 3, 1])
+    col41, col42, col43 = st.columns([1, 1, 1])
 
     with col42:
-        st.dataframe(sry)
+        st.dataframe(data=sry, width=700, height=768)
 
     st.balloons()
