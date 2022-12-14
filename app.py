@@ -163,9 +163,9 @@ if submitted:
     ##################################################
     #          Table                                 #
     ##################################################
-    col41, col42, col43 = st.columns([1, 3, 1])
+    col41, col42, col43 = st.columns([1, 5, 1])
 
     with col42:
-        st.dataframe(sry)
+        st.ling_chart(data=sry,width=0, height=0, use_container_width=True)
 
     st.balloons()
