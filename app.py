@@ -161,8 +161,8 @@ if submitted:
     col41, col42, col43 = st.columns([1, 1, 1])
 
     with col42:
-        sry.reset_index(drop=True)
         sry.columns = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
+        sry.set_index("Categories")
         st.dataframe(data=sry, width=700)
 
     st.balloons()
