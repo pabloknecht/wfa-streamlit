@@ -10,7 +10,7 @@ logo = Image.open('wfa_logo.png')
 icon = Image.open('wfa_icon.png')
 
 #set streamlit page config
-st.set_page_config(layout="wide",page_title="Watching From Above", page_icon=icon)
+#st.set_page_config(layout="wide",page_title="Watching From Above", page_icon=icon)
 
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
