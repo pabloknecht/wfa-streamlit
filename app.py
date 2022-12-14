@@ -54,7 +54,7 @@ st.markdown(remove_w_s, unsafe_allow_html=True)
 background = '''
         <style>
                 p{
-                    background-image: logo);
+                    background-image: logo)
                 }
         </style>
         '''
