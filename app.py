@@ -55,8 +55,6 @@ st.markdown(remove_w_s, unsafe_allow_html=True)
 
 st.image(logo, width=400)
 
-st.title('Watching from above')
-
 st.subheader('Discover landscape evolution With Sentinel-2 satellite (EuroSAT)')
 
 ##################################################
