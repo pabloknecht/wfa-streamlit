@@ -55,9 +55,9 @@ st.markdown(remove_w_s, unsafe_allow_html=True)
 
 st.image(logo, width=500)
 
-st.title('Watching from above ')
+st.title('Watching from above')
 
-st.header('With Sentinel-2 satellite (EuroSAT) and Google Maps')
+st.header('Discover landscape evolution With Sentinel-2 satellite (EuroSAT)')
 
 ##################################################
 #                  test FORM                     #
@@ -115,8 +115,6 @@ if submitted:
     ##################################################
     col11, col12 = st.columns(2)
 
-    st.header(f'Landscape evolution: {year_1} vs. {year_2}')
-
     with col11:
         st.header(f"{year_1}")
         st.image(image_year_1)
@@ -170,7 +168,6 @@ if submitted:
     col41, col42, col43 = st.columns([1, 3, 1])
 
     with col42:
-        st.header("Landscape evolution")
         st.dataframe(sry)
 
     st.balloons()
