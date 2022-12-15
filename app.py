@@ -11,6 +11,9 @@ import numpy as np
 def update_text():
     st.session_state.text = st.session_state.selector
 
+def update_selector():
+    st.session_state.selector = ''
+
 
 #set images
 logo = Image.open('wfa_logo.png')
@@ -80,12 +83,12 @@ cola1, cola2, cola3, cola4 = st.columns([2, 2, 2, 2])
 with cola2:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
-    address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed", key = 'text')
+    address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed", key = 'text', on_change= update_selector)
 
 with cola3:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Some location examples', unsafe_allow_html=True)
-    x = st.selectbox('Options', (' ','Sao paulo',
+    x = st.selectbox('Options', ('','Sao paulo',
                                  '-20.859100, -61.143501',  # Deforestation Paraguay 1
                                  '-20.596496, -60.505891',  # Deforestation Paraguay 2
                                  '-21.607402, -60.635624',  # Deforestation Paraguay localisation 3
