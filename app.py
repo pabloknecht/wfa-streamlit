@@ -72,11 +72,25 @@ st.subheader('Discover landscape evolution with Sentinel-2 satellite (EuroSAT)')
 #                  Input Data                    #
 ##################################################
 
-cola1, cola2, cola3 = st.columns([2, 4, 2])
+cola1, cola2, cola3, cola4 = st.columns([2, 4, 4, 2])
 with cola2:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
     address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
+
+with cola4:
+    #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
+    x = st.selectbox('Options', ('','Sao paulo',
+                                 '-20.859100, -61.143501',  # Deforestation Paraguay 1
+                                 '-20.596496, -60.505891',  # Deforestation Paraguay 2
+                                 '-21.607402, -60.635624',  # Deforestation Paraguay localisation 3
+                                 '-22.183099, -61.431191',  # Deforestation Paraguay localisation 4
+                                 '70, -22.32',              # Greenland melting
+                                 '29.9298757, 31.6514432',  # New Administrative Capital, Wedian - Egypt
+                                 '-24.319728, -50.447382',  # Pin forest in Brazil
+                                 '-20.1391575,-44.1370295'  # Brumadinho - Brazil
+                                 ),index=0, label_visibility="collapsed")
+
 
 coly1, coly2, coly3, coly4 = st.columns([2, 2, 2, 2])
 with coly2:
