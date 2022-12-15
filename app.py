@@ -178,7 +178,7 @@ if submitted:
 
         ########## dataframe style
         th_props = [
-        ('font-size', '18px'),
+        ('font-size', '20px'),
         ('text-align', 'center'),
         ('font-weight', 'bold'),
         ('color', '#FFFFFF'),
@@ -186,7 +186,7 @@ if submitted:
         ]
 
         td_props = [
-        ('font-size', '16px'),
+        ('font-size', '18px'),
         ('text-align', 'center'),
         ('color', '#FFFFFF')
         ]
