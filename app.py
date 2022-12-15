@@ -84,7 +84,7 @@ with coly2:
     year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
 with coly3:
     st.markdown('Year 2', unsafe_allow_html=True)
-    year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+    year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
 
 if year_1 == '2017 (Europe only)':
     year_1 = '2017'
@@ -94,7 +94,7 @@ if year_2 == '2017 (Europe only)':
 
 colb1, colb2, colb3 = st.columns([2, 4, 2])
 with colb2:
-    submitted = st.button('Landscape evolution2')
+    submitted = st.button('Landscape evolution')
     # with st.form("key1"):
     #     # ask for input
     #     submitted = st.form_submit_button('Landscape evolution')
