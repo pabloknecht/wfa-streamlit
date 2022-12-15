@@ -73,7 +73,7 @@ st.markdown(remove_w_s, unsafe_allow_html=True)
 
 st.image(logo, width=400)
 
-st.subheader('Discover landscape evolution with Sentinel-2 satellite (EuroSAT)')
+st.subheader(':satellite: Discover landscape evolution with Sentinel-2 satellite (EuroSAT) :satellite:')
 
 ##################################################
 #                  Input Data                    #
@@ -102,10 +102,10 @@ with cola3:
 
 coly1, coly2, coly3, coly4 = st.columns([2, 2, 2, 2])
 with coly2:
-    st.markdown('Year 1 :calendar::', unsafe_allow_html=True)
+    st.markdown('Year 1:', unsafe_allow_html=True)
     year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
 with coly3:
-    st.markdown('Year 2 :calendar::', unsafe_allow_html=True)
+    st.markdown('Year 2:', unsafe_allow_html=True)
     year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
 
 if year_1 == '2017 (Europe only)':
