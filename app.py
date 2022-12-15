@@ -69,28 +69,11 @@ st.image(logo, width=400)
 st.subheader('Discover landscape evolution with Sentinel-2 satellite (EuroSAT)')
 
 ##################################################
-#                  test FORM                     #
+#                  Input Data                    #
 ##################################################
-colf1, colf2, colf3 = st.columns([1, 2, 1])
-
-with colf2:
-    with st.form(key='params_for_api'):
-
-        #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
-        st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
-        address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
-
-        year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
-        year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
-
-        submitted = st.form_submit_button('Landscape evolution')
-
-        if year_1 == '2017 (Europe only)':
-            year_1 = '2017'
-
-        if year_2 == '2017 (Europe only)':
-            year_2 = '2017'
-
+#address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
+st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
+address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
 
 coly1, coly2, coly3, coly4 = st.columns([2, 2, 2, 2])
 with coly2:
@@ -99,6 +82,19 @@ with coly2:
 with coly3:
     st.markdown('Year 2', unsafe_allow_html=True)
     year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+
+# year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+# year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
+
+submitted = st.form_submit_button('Landscape evolution')
+
+if year_1 == '2017 (Europe only)':
+    year_1 = '2017'
+
+if year_2 == '2017 (Europe only)':
+    year_2 = '2017'
+
+
 
 
 
