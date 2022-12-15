@@ -183,14 +183,14 @@ if submitted:
         ('font-weight', 'bold'),
         ('color', '#FFFFFF'),
 #        ('background-color', '#060537'),
-        ('border','0.5px solid #FFFFFF')
+        ('border','1px solid #0f0d8a')
         ]
 
         td_props = [
         ('font-size', '18px'),
         ('text-align', 'centersssss'),
         ('color', '#FFFFFF'),
-        ('border','0.5px solid #FFFFFF')
+        ('border','1px solid #0f0d8a')
         ]
 
         styles = [
