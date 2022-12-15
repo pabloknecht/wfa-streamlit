@@ -92,13 +92,13 @@ with colf2:
             year_2 = '2017'
 
 
-coly1, coly2, coly3, coly4 = st.columns([1, 2, 2, 1])
+coly1, coly2, coly3, coly4 = st.columns([2, 2, 2, 2])
 with coly2:
     st.markdown('Year 1', unsafe_allow_html=True)
     year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
 with coly3:
     st.markdown('Year 2', unsafe_allow_html=True)
-    year_2 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+    year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
 
 
 
