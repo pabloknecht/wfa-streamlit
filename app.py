@@ -80,16 +80,8 @@ with colf2:
         st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
         address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
 
-        coly1, coly2, coly3, coly4 = st.columns([1, 2, 2, 1])
-        with coly2:
-            st.markdown('Year 1', unsafe_allow_html=True)
-            year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
-        with coly3:
-            st.markdown('Year 2', unsafe_allow_html=True)
-            year_2 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
-
-        # year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
-        # year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
+        year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+        year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
 
         submitted = st.form_submit_button('Landscape evolution')
 
@@ -98,6 +90,16 @@ with colf2:
 
         if year_2 == '2017 (Europe only)':
             year_2 = '2017'
+
+
+coly1, coly2, coly3, coly4 = st.columns([1, 2, 2, 1])
+with coly2:
+    st.markdown('Year 1', unsafe_allow_html=True)
+    year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+with coly3:
+    st.markdown('Year 2', unsafe_allow_html=True)
+    year_2 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+
 
 
 params = dict(
