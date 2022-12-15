@@ -112,7 +112,9 @@ if submitted:
     #          FIRST TABLE - Plot original images          #
     ########################################################
     st.subheader(f"{year_1}")
-    col11, col12, col13, col14 = st.columns([1, 1, 1, 1])
+    col10, col11, col12, col13, col14 = st.columns([0.2, 1, 1, 1, 1])
+    with col10:
+        st.subheader(f"{year_2}")
 
     with col11:
         st.image(image_year_1)
@@ -133,9 +135,10 @@ if submitted:
     #######################################################
     #          SECOND TABLE - Plot comparision            #
     #######################################################
-    """ """
-    st.subheader(f"{year_2}")
-    col21, col22, col23, col24 = st.columns([1, 1, 1, 1])
+
+    col20, col21, col22, col23, col24 = st.columns([0.2, 1, 1, 1, 1])
+    with col20:
+        st.subheader(f"{year_2}")
 
     with col21:
         st.image(image_year_2)
