@@ -187,7 +187,7 @@ if submitted:
 
         td_props = [
         ('font-size', '18px'),
-        ('text-align', 'center'),
+        ('text-align', 'centersssss'),
         ('color', '#FFFFFF')
         ]
 
