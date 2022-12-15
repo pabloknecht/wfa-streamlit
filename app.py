@@ -177,19 +177,19 @@ if submitted:
         sry.set_index("Categories", inplace=True)
 
         ########## dataframe style
+        td_props = [
+        ('font-size', '18px'),
+        ('text-align', 'center'),
+        ('color', '#FFFFFF'),
+        ('border','1px solid #8e7cc3')
+        ]
+
         th_props = [
         ('font-size', '20px'),
         ('text-align', 'center'),
         ('font-weight', 'bold'),
         ('color', '#FFFFFF'),
 #        ('background-color', '#060537'),
-        ('border','1px solid #8e7cc3')
-        ]
-
-        td_props = [
-        ('font-size', '18px'),
-        ('text-align', 'centersssss'),
-        ('color', '#FFFFFF'),
         ('border','1px solid #8e7cc3')
         ]
 
