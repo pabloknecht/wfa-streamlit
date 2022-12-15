@@ -179,7 +179,7 @@ if submitted:
         ########## dataframe style
         th_props = [
         ('font-size', '20px'),
-        ('text-align', 'center'),
+#        ('text-align', 'center'),
         ('font-weight', 'bold'),
         ('color', '#FFFFFF'),
 #        ('background-color', '#060537')
