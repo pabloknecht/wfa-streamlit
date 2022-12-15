@@ -176,18 +176,19 @@ if submitted:
         sry.columns = columns_names
         sry.set_index("Categories", inplace=True)
 
-
         ########## dataframe style
         th_props = [
-        ('font-size', '14px'),
+        ('font-size', '18px'),
         ('text-align', 'center'),
         ('font-weight', 'bold'),
-        ('color', '#6d6d6d'),
-        ('background-color', '#f7ffff')
+        ('color', '#FFFFFF'),
+#        ('background-color', '#060537')
         ]
 
         td_props = [
-        ('font-size', '12px')
+        ('font-size', '16px'),
+        ('text-align', 'center'),
+        ('color', '#FFFFFF')
         ]
 
         styles = [
@@ -196,7 +197,7 @@ if submitted:
         ]
 
         # table
-        df2=sry.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
+        df2=sry.style.set_properties(**{'text-align': 'center'}).set_table_styles(styles)
         st.table(df2)
         #st.dataframe(data=sry, width=700)
 
