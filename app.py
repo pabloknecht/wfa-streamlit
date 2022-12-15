@@ -79,7 +79,7 @@ with colf2:
         #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
         st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
         address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
-        coly11, coly12 = st.columns([0.4, 0.2, 0.2, 0.4])
+        coly11, coly12 = st.columns([0.2, 0.2])
         with coly11:
             st.markdown('Year 1', unsafe_allow_html=True)
         with coly12:
