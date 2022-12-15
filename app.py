@@ -111,10 +111,10 @@ if submitted:
     ########################################################
     #          FIRST TABLE - Plot original images          #
     ########################################################
-    st.subheader(f"{year_1}")
+    """ """
     col10, col11, col12, col13, col14 = st.columns([0.2, 1, 1, 1, 1])
     with col10:
-        st.subheader(f"{year_2}")
+        st.subheader(f"{year_1}")
 
     with col11:
         st.image(image_year_1)
