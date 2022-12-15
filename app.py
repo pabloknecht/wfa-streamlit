@@ -86,16 +86,19 @@ with coly3:
     st.markdown('Year 2', unsafe_allow_html=True)
     year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
 
-# year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
-# year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
-
-submitted = st.form_submit_button('Landscape evolution')
-
 if year_1 == '2017 (Europe only)':
     year_1 = '2017'
 
 if year_2 == '2017 (Europe only)':
     year_2 = '2017'
+
+with st.form("key1"):
+    # ask for input
+    submitted = st.form_submit_button('Landscape evolution')
+
+
+
+
 
 
 
