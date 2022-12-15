@@ -77,7 +77,7 @@ with colf2:
     with st.form(key='params_for_api'):
 
         #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
-        address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', font_size=40)
+        address = st.text_input('',value='-20.859100, -61.143501')
         year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1)
         year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3)
 
