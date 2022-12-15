@@ -96,7 +96,7 @@ with cola3:
                                  '70, -22.32',              # Greenland melting
                                  '29.9298757, 31.6514432',  # New Administrative Capital, Wedian - Egypt
                                  '-24.319728, -50.447382',  # Pin forest in Brazil
-                                 '-20.1391575,-44.1370295'  # Brumadinho - Brazil
+                                 '-20.139157, -44.1370295'  # Brumadinho - Brazil
                                  ),index=0, label_visibility="collapsed", key = 'selector', on_change= update_text)
 
 
