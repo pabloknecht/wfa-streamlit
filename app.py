@@ -111,7 +111,7 @@ if submitted:
     ########################################################
     #          FIRST TABLE - Plot original images          #
     ########################################################
-    """ """
+    st.markdown("***")
     colesp, col10, col11, col12, col13, col14 = st.columns([0.4, 0.2, 1, 1, 1, 0.5])
     with col10:
         st.subheader(f"{year_1}")
@@ -135,8 +135,6 @@ if submitted:
     #######################################################
     #          SECOND TABLE - Plot comparision            #
     #######################################################
-    st.markdown("***")
-
     colesp, col20, col21, col22, col23, col24 = st.columns([0.4, 0.2, 1, 1, 1, 0.5])
     with col20:
         st.subheader(f"{year_2}")
@@ -156,6 +154,11 @@ if submitted:
     with col24:
        pass
 
+
+    #######################################################
+    #                       SUMMARY                       #
+    #######################################################
+    st.markdown("***")
     colt1, colt2, colt3 = st.columns([1, 1, 1])
     with colt2:
         columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
