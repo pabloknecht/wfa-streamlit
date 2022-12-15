@@ -179,7 +179,7 @@ if submitted:
     #######################################################
     #                       SUMMARY                       #
     #######################################################
-    st.markdown("***")
+    #st.markdown("***")
     colt1, colt2, colt3 = st.columns([1, 1, 1])
     with colt2:
         columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
