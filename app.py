@@ -85,11 +85,11 @@ with colf2:
         with coly12:
             st.markdown('Year 2', unsafe_allow_html=True)
 
-        coly21, coly22 = st.columns([0.4, 0.2, 0.2, 0.4])
-        with coly21:
-            year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
-        with coly22:
-            year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
+        # coly21, coly22 = st.columns([0.4, 0.2, 0.2, 0.4])
+        # with coly21:
+        #     year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
+        # with coly22:
+        #     year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
 
         # year_1 = st.selectbox('Year 1', ('2017 (Europe only)', '2018', '2019', '2020'),index=1, label_visibility="collapsed")
         # year_2 = st.selectbox('Year 2', ('2017 (Europe only)', '2018', '2019', '2020'),index=3, label_visibility="collapsed")
