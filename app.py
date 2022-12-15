@@ -88,11 +88,12 @@ with cola2:
 with cola3:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Interesting examples :stuck_out_tongue_winking_eye::', unsafe_allow_html=True)
-    x = st.selectbox('Options', ('','Sao paulo',
+    x = st.selectbox('Options', ('',
+                                 'Sao paulo',
                                  '-20.859100, -61.143501',  # Deforestation Paraguay 1
                                  '-20.596496, -60.505891',  # Deforestation Paraguay 2
-                                 '-21.607402, -60.635624',  # Deforestation Paraguay localisation 3
-                                 '-22.183099, -61.431191',  # Deforestation Paraguay localisation 4
+                                 '-21.607402, -60.635624',  # Deforestation Paraguay 3
+                                 '-22.183099, -61.431191',  # Deforestation Paraguay 4
                                  '70, -22.32',              # Greenland melting
                                  '29.9298757, 31.6514432',  # New Administrative Capital, Wedian - Egypt
                                  '-24.319728, -50.447382',  # Pin forest in Brazil
