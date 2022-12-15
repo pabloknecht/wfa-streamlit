@@ -95,9 +95,6 @@ if year_2 == '2017 (Europe only)':
 colb1, colb2, colb3 = st.columns([2, 4, 2])
 with colb2:
     submitted = st.button('Landscape evolution')
-    # with st.form("key1"):
-    #     # ask for input
-    #     submitted = st.form_submit_button('Landscape evolution')
 
 params = dict(
     address = address,
