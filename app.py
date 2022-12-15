@@ -130,7 +130,7 @@ if submitted:
 
 
     with col14:
-        pass
+        st.image('LABELS_ONLY.png')
 
     #######################################################
     #          SECOND TABLE - Plot comparision            #
@@ -154,20 +154,11 @@ if submitted:
 
 
     with col24:
-        pass
-
-
-
-    ######################################################
-    #          Table                                     #
-    ######################################################
-    """ """
-    col41, col42, col43 = st.columns([1, 1, 1])
-
-    with col42:
         columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
         sry.columns = columns_names
         sry.set_index("Categories", inplace=True)
         st.dataframe(data=sry, width=700)
+
+
 
     st.balloons()
