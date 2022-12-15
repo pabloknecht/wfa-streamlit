@@ -12,8 +12,8 @@ icon = Image.open('wfa_icon.png')
 # Labels size
 lbls = Image.open('Labels2.png')
 factor = 0.9
-h = int(lbls.size()[0]*factor)
-w = int(lbls.size()[1]*factor)
+h = int(lbls.size[0]*factor)
+w = int(lbls.size[1]*factor)
 size = (h, w)
 lbls = lbls.resize(size)
 
