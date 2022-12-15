@@ -130,7 +130,7 @@ if submitted:
 
 
     with col14:
-        st.image('LABELS_ONLY.png')
+        st.image('LABEL_ONLY.png')
 
     #######################################################
     #          SECOND TABLE - Plot comparision            #
