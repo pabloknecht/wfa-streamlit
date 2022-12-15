@@ -78,7 +78,7 @@ with cola2:
     st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
     address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
 
-with cola4:
+with cola3:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Preset locations', unsafe_allow_html=True)
     x = st.selectbox('Options', ('','Sao paulo',
