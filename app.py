@@ -174,7 +174,7 @@ with st.spinner('calling API'):
             st.image(img_colormap_2)
 
         with col24:
-        pass
+            pass
 
 
         #######################################################
