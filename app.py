@@ -9,6 +9,14 @@ from image_viz import summary, landscape_changes, image_colormap
 logo = Image.open('wfa_logo.png')
 icon = Image.open('wfa_icon.png')
 
+# Labels size
+lbls = Image.open('Labels2.png')
+factor = 0.9
+h = int(lbls.size()[0]*factor)
+w = int(lbls.size()[1]*factor)
+size = (h, w)
+lbls = lbls.resize(size)
+
 #set streamlit page config
 st.set_page_config(page_title="Watching From Above", page_icon=icon)
 
@@ -130,7 +138,7 @@ if submitted:
 
 
     with col14:
-        st.image('Labels2.png')
+        st.image(lbls)
 
     #######################################################
     #          SECOND TABLE - Plot comparision            #
