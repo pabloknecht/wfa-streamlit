@@ -157,7 +157,7 @@ if submitted:
         columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
         sry.columns = columns_names
         sry.set_index("Categories", inplace=True)
-        st.dataframe(data=sry, width=700)
+        st.dataframe(data=sry)
 
 
 
