@@ -72,7 +72,7 @@ st.subheader('Discover landscape evolution with Sentinel-2 satellite (EuroSAT)')
 #                  Input Data                    #
 ##################################################
 
-cola1, cola2, cola3, cola4 = st.columns([2, 4, 4, 2])
+cola1, cola2, cola3, cola4 = st.columns([2, 2, 2, 2])
 with cola2:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
