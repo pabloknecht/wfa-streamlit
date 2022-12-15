@@ -8,6 +8,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+def update_text():
+    st.session_state.text = st.session_state.selector
+
+
 #set images
 logo = Image.open('wfa_logo.png')
 icon = Image.open('wfa_icon.png')
@@ -76,7 +80,7 @@ cola1, cola2, cola3, cola4 = st.columns([2, 2, 2, 2])
 with cola2:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
     st.markdown('Adress or GPS coordinates', unsafe_allow_html=True)
-    address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed")
+    address = st.text_input('Adress or GPS coordinates',value='-20.859100, -61.143501', label_visibility="collapsed", key = 'text')
 
 with cola3:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
@@ -90,7 +94,7 @@ with cola3:
                                  '29.9298757, 31.6514432',  # New Administrative Capital, Wedian - Egypt
                                  '-24.319728, -50.447382',  # Pin forest in Brazil
                                  '-20.1391575,-44.1370295'  # Brumadinho - Brazil
-                                 ),index=0, label_visibility="collapsed")
+                                 ),index=0, label_visibility="collapsed", key = 'selector', on_change= update_text)
 
 
 coly1, coly2, coly3, coly4 = st.columns([2, 2, 2, 2])
