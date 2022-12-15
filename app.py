@@ -114,6 +114,7 @@ if submitted:
     """ """
     colesp, col10, col11, col12, col13, col14 = st.columns([0.5, 0.2, 1, 1, 1, 0.5])
     with col10:
+        st.write("/n/n/n/")
         st.subheader(f"{year_1}")
 
     with col11:
@@ -136,8 +137,9 @@ if submitted:
     #          SECOND TABLE - Plot comparision            #
     #######################################################
 
-    colesp, col20, col21, col22, col23, col24 = st.columns([0.5, 0.2, 1, 1, 1, 0.5])
+    colesp, col20, col21, col22, col23, col24 = st.columns([0.4, 0.2, 1, 1, 1, 0.5])
     with col20:
+        st.write("/n/n/n/")
         st.subheader(f"{year_2}")
 
     with col21:
@@ -152,13 +154,14 @@ if submitted:
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
 
-
     with col24:
        pass
 
-    columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
-    sry.columns = columns_names
-    sry.set_index("Categories", inplace=True)
-    st.dataframe(data=sry, width=700)
+    colt1, colt2, colt3 = st.columns([1, 1, 1])
+    with colt2:
+        columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
+        sry.columns = columns_names
+        sry.set_index("Categories", inplace=True)
+        st.dataframe(data=sry, width=700)
 
     st.balloons()
