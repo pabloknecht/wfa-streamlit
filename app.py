@@ -214,4 +214,5 @@ if submitted:
         st.table(df2)
         #st.dataframe(data=sry, width=700)
 
-    st.balloons()
+    #st.balloons()
+    st.snow()
