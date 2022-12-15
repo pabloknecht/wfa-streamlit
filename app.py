@@ -187,7 +187,7 @@ if submitted:
 
         td_props = [
         ('font-size', '18px'),
-        ('text-align', 'right'),
+#        ('text-align', 'right'),
         ('color', '#FFFFFF')
         ]
 
@@ -197,7 +197,7 @@ if submitted:
         ]
 
         # table
-        df2=sry.style.set_properties(**{'background-color': 'red', 'text-align': 'center','color': 'green'}).set_table_styles(styles)
+        df2=sry.style.set_properties(**{'background-color': 'black', 'text-align': 'center','color': 'red'}).set_table_styles(styles)
         st.table(df2)
         #st.dataframe(data=sry, width=700)
 
