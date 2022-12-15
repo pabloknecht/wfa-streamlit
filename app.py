@@ -112,7 +112,7 @@ if submitted:
     #          FIRST TABLE - Plot original images          #
     ########################################################
     """ """
-    col10, col11, col12, col13, col14 = st.columns([0.2, 1, 1, 1, 1])
+    colesp, col10, col11, col12, col13, col14 = st.columns([0.5, 0.2, 1, 1, 1, 0.5])
     with col10:
         st.subheader(f"{year_1}")
 
@@ -130,13 +130,13 @@ if submitted:
 
 
     with col14:
-        st.image('LABEL_ONLY.png')
+        st.image('Labels2.png')
 
     #######################################################
     #          SECOND TABLE - Plot comparision            #
     #######################################################
 
-    col20, col21, col22, col23, col24 = st.columns([0.2, 1, 1, 1, 1])
+    colesp, col20, col21, col22, col23, col24 = st.columns([0.5, 0.2, 1, 1, 1, 0.5])
     with col20:
         st.subheader(f"{year_2}")
 
@@ -154,11 +154,11 @@ if submitted:
 
 
     with col24:
-        columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
-        sry.columns = columns_names
-        sry.set_index("Categories", inplace=True)
-        st.dataframe(data=sry)
+       pass
 
-
+    columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
+    sry.columns = columns_names
+    sry.set_index("Categories", inplace=True)
+    st.dataframe(data=sry, width=700)
 
     st.balloons()
