@@ -4,6 +4,9 @@ import numpy as np
 from PIL import Image
 from get_new_images import get_new_image
 from image_viz import summary, landscape_changes, image_colormap
+import streamlit as st
+import pandas as pd
+import numpy as np
 
 #set images
 logo = Image.open('wfa_logo.png')
@@ -172,6 +175,29 @@ if submitted:
         columns_names = ["Categories", f"{year_1}", f"{year_2}", "Difference"]
         sry.columns = columns_names
         sry.set_index("Categories", inplace=True)
-        st.dataframe(data=sry, width=700)
+
+
+        ########## dataframe style
+        th_props = [
+        ('font-size', '14px'),
+        ('text-align', 'center'),
+        ('font-weight', 'bold'),
+        ('color', '#6d6d6d'),
+        ('background-color', '#f7ffff')
+        ]
+
+        td_props = [
+        ('font-size', '12px')
+        ]
+
+        styles = [
+        dict(selector="th", props=th_props),
+        dict(selector="td", props=td_props)
+        ]
+
+        # table
+        df2=sry.style.set_properties(**{'text-align': 'left'}).set_table_styles(styles)
+        st.table(df2)
+        #st.dataframe(data=sry, width=700)
 
     st.balloons()
