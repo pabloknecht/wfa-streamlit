@@ -84,7 +84,7 @@ with cola2:
 
 with cola3:
     #address = st.text_input('Adress or GPS coordinates','-20.859100, -61.143501')
-    st.markdown('Preset locations', unsafe_allow_html=True)
+    st.markdown('Some location examples', unsafe_allow_html=True)
     x = st.selectbox('Options', (' ','Sao paulo',
                                  '-20.859100, -61.143501',  # Deforestation Paraguay 1
                                  '-20.596496, -60.505891',  # Deforestation Paraguay 2
