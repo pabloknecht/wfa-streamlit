@@ -108,56 +108,56 @@ if submitted:
     image_year_2 = get_new_image(address, year_2)
 
 
-    ##################################################
-    #          FIRST TABLE - Plot original images    #
-    ##################################################
+    ########################################################
+    #          FIRST TABLE - Plot original images          #
+    ########################################################
+    st.subheader(f"{year_1}")
     col11, col12, col13, col14 = st.columns([1, 1, 1, 1])
 
-    with col12:
-        st.subheader(f"{year_1}")
+    with col11:
         st.image(image_year_1)
 
-    with col13:
-        st.subheader(f"{year_2}")
-        st.image(image_year_2)
-
-
-    ##################################################
-    #          SECOND TABLE - Plot comparision       #
-    ##################################################
-    """ """
-    col21, col22, col23, col24 = st.columns([1, 1, 1, 1])
-
-    with col22:
+    with col12:
         img_changes_1 = landscape_changes(image_year_1, changes)
         st.image(img_changes_1)
 
-    with col23:
+
+    with col13:
+        img_colormap_1 = image_colormap(cat_year_1_np)
+        st.image(img_colormap_1)
+
+
+    with col14:
+        pass
+
+    #######################################################
+    #          SECOND TABLE - Plot comparision            #
+    #######################################################
+    """ """
+    st.subheader(f"{year_2}")
+    col21, col22, col23, col24 = st.columns([1, 1, 1, 1])
+
+    with col21:
+        st.image(image_year_2)
+
+    with col22:
         img_changes_2 = landscape_changes(image_year_2, changes)
         st.image(img_changes_2)
 
 
-    ##################################################
-    #                  TABLE Colormap                #
-    ##################################################
-    """ """
-    col31, col32, col33, col34 = st.columns([1, 1, 1, 1])
-
-    with col32:
-        img_colormap_1 = image_colormap(cat_year_1_np)
-        st.image(img_colormap_1)
-
-    with col33:
+    with col23:
         img_colormap_2 = image_colormap(cat_year_2_np)
         st.image(img_colormap_2)
 
 
-    st.image('Labels.png', width=700)
+    with col24:
+        pass
 
 
-    ##################################################
-    #          Table                                 #
-    ##################################################
+
+    ######################################################
+    #          Table                                     #
+    ######################################################
     """ """
     col41, col42, col43 = st.columns([1, 1, 1])
 
