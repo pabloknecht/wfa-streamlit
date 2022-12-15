@@ -199,7 +199,7 @@ if submitted:
         ]
 
         # table
-        df2=sry.style.set_properties(**{'text-align':'centeraaaaaaa'}).set_table_styles(styles)
+        df2=sry.style.set_properties(**{'text-align':'center'}).set_table_styles(styles)
         st.table(df2)
         #st.dataframe(data=sry, width=700)
 
